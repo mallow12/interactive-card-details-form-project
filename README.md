@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./images/Screenshot%202023-03-02%20at%2012-27-32%20Frontend%20Mentor%20Interactive%20card%20details%20form.png)
 ![](./images/Screenshot%202023-03-02%20at%2012-28-03%20Frontend%20Mentor%20Interactive%20card%20details%20form.png)
+![](./images/Screenshot%202023-03-02%20at%2012-27-32%20Frontend%20Mentor%20Interactive%20card%20details%20form.png)
 
 ### Links
 

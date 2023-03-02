@@ -1,0 +1,433 @@
+@import 'config';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $fonty;
+}
+
+img {
+  width: 100%;
+}
+
+.top-left {
+  background: $background-mobile no-repeat center center / cover;
+  width: 100%;
+  height: 16rem;
+
+  .card {
+    width: 17rem;
+    height: 10rem;
+    border-radius: 8px;
+    color: $White;
+
+    &.back {
+      background: url(/images/bg-card-back.png) no-repeat center center / cover;
+      position: absolute;
+      right: 1rem;
+      top: 2rem;
+      padding: 25px;
+
+      #cvv-no {
+        margin-top: 43px;
+        text-align: right;
+      }
+    }
+
+    &.front {
+      background: url(/images/bg-card-front.png) no-repeat center center / cover;
+      position: absolute;
+      padding: 5rem 1rem 15px 20px;
+      line-height: 2rem;
+      left: 1rem;
+      top: 8rem;
+
+      img {
+        width: 20%;
+        position: absolute;
+        top: 15px;
+      }
+      .card-number {
+        font-size: 20px;
+      }
+
+      .owner-name {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+
+        .card-name {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+.form {
+  margin-top: 4rem;
+  padding: 25px;
+
+  &.hidden {
+    display: none;
+  }
+
+  label {
+    display: block;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+  }
+  input {
+    font-family: $fonty;
+    font-size: 15px;
+    margin: 10px 0 10px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 7px;
+    border: 1.5px solid $Light-grayish-violet;
+    outline: 0;
+
+    &:hover {
+      background: linear-gradient($White, $White) padding-box,
+        linear-gradient(90deg, hsl(249, 99%, 64%), hsl(278, 94%, 30%))
+          border-box;
+      border: 1.5px solid transparent;
+      cursor: pointer;
+    }
+
+    &::placeholder {
+      color: $Dark-grayish-violet;
+    }
+  }
+  .form-control {
+    position: relative;
+    margin-bottom: 5px;
+    p {
+      color: $Red;
+      visibility: hidden;
+      font-size: 12px;
+    }
+
+    &.error p {
+      visibility: visible;
+    }
+
+    &.error input {
+      border: 1.5px solid $Red;
+    }
+  }
+
+  .small-no {
+    display: flex;
+    width: 100%;
+    .exp {
+      // margin-right: 9px;
+      width: 50%;
+      .exp-input {
+        display: flex;
+        flex-wrap: wrap;
+        input {
+          width: 45%;
+        }
+        input:nth-of-type(1) {
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .cvc{
+      width: 50%;
+    }
+  }
+
+  button {
+    background-color: $Very-dark-violet;
+    border: none;
+    cursor: pointer;
+    color: $White;
+    font-family: $fonty;
+    margin-top: 15px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 7px;
+  }
+}
+
+.thank-you {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7rem 25px 25px 25px;
+
+  &.hidden {
+    display: none;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    img {
+      width: 5rem;
+    }
+
+    h1 {
+      margin-top: 2rem;
+      color: $Very-dark-violet;
+    }
+
+    p {
+      margin-top: 1.5rem;
+      color: $Dark-grayish-violet;
+    }
+
+    button {
+      background-color: $Very-dark-violet;
+      color: $White;
+      cursor: pointer;
+      border: 0;
+      font-family: $fonty;
+      border-radius: 5px;
+      margin-top: 2.5rem;
+      width: 100%;
+      padding: 15px;
+    }
+  }
+}
+
+@media (min-width: 470px) {
+  .top-left {
+    .card {
+      &.back {
+        right: 3rem;
+      }
+      &.front {
+        left: 3rem;
+      }
+    }
+  }
+
+  .form {
+    padding: 45px;
+  }
+
+  .thank-you {
+    padding: 7rem 45px 45px 45px;
+  }
+}
+
+@media (min-width: 570px) {
+  .top-left {
+    .card {
+      &.back {
+        right: 5rem;
+      }
+      &.front {
+        left: 5rem;
+      }
+    }
+  }
+
+  .form {
+    padding: 65px;
+  }
+
+  .thank-you {
+    padding: 7rem 65px 65px 65px;
+  }
+}
+
+@media (min-width: 670px) {
+  .top-left {
+    .card {
+      &.back {
+        right: 8rem;
+      }
+      &.front {
+        left: 8rem;
+      }
+    }
+  }
+
+  .form {
+    padding: 95px;
+  }
+
+  .thank-you {
+    padding: 7rem 95px 95px 95px;
+  }
+}
+
+@media (min-width: 760px) {
+  .top-left {
+    .card {
+      &.back {
+        right: 11rem;
+      }
+      &.front {
+        left: 11rem;
+      }
+    }
+  }
+
+  .form {
+    padding: 125px;
+  }
+
+  .thank-you {
+    padding: 7rem 80px 125px 125px;
+  }
+}
+
+@media (min-width: 840px) {
+  .top-left {
+    background: $background-desktop no-repeat center center / cover;
+    width: 35%;
+    height: 100vh;
+    position: absolute;
+
+    .card {
+      &.front {
+        left: 3rem;
+      }
+
+      &.back {
+        left: 4rem;
+        top: 20rem;
+      }
+    }
+  }
+
+  .form {
+    margin-top: 0;
+    padding: 8rem 1rem 4rem 1rem;
+    margin-left: 21rem;
+
+    label {
+      font-size: 11px;
+    }
+
+    input {
+      padding: 10px;
+      width: 60%;
+      margin: 8px 0 10px;
+    }
+
+    .small-no {
+      width: 60%;
+      .exp {
+        .exp-input {
+          display: flex;
+          // width: 10rem;
+          input:nth-of-type(1) {
+            margin-right: 7px;
+          }
+        }
+      }
+
+      .cvc {
+        margin-left: 15px;
+        input {
+          width: 100%;
+        }
+      }
+    }
+
+    button {
+      width: 60%;
+    }
+  }
+
+  .thank-you {
+    justify-content: flex-end;
+    align-items: flex-end;
+    .content {
+      width: 50%;
+    }
+    button {
+      width: 10rem;
+    }
+  }
+}
+
+@media (min-width: 875px) {
+  .top-left {
+    .card {
+      &.front {
+        left: 5rem;
+      }
+
+      &.back {
+        left: 10rem;
+      }
+    }
+  }
+
+  .form {
+    margin-left: 29rem;
+
+    input {
+      width: 80%;
+    }
+    .small-no {
+      width: 80%;
+    }
+    button{
+      width: 80%;
+    }
+  }
+}
+
+@media (min-width: 940px) {
+  .top-left {
+    .card {
+      &.front {
+        left: 7rem;
+      }
+
+      &.back {
+        left: 11rem;
+      }
+    }
+  }
+
+  .form {
+    margin-left: 29rem;
+  }
+}
+
+@media (min-width: 1053px) {
+  .top-left {
+    .card {
+      &.front {
+        left: 15rem;
+      }
+
+      &.back {
+        left: 18rem;
+      }
+    }
+  }
+
+  .form {
+    margin-left: 40rem;
+    padding-right: 8rem;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  // padding-right: 20%;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
